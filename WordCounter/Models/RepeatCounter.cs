@@ -17,5 +17,10 @@ namespace WordCounter.Models
       }
     }
 
+    public static string ValidateSentence(string inputSentence)
+    {
+      return inputSentence;
+    }
+
   }
 }
