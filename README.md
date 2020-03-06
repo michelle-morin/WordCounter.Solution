@@ -6,7 +6,7 @@
 
 ## Description
 
-_This project (accessible on [Github](https://github.com/michelle-morin/WordCounter)) is a console application that gathers both a word and sentence from a user, then checks how frequently the word appears in the sentence. The application checks for full word matches only (e.g., if provided the word "cat" and the sentence "I'm walking the cat to the cathedral", the first three letters of the word cathedral would not be counted._ 
+_This project (accessible on [Github](https://github.com/michelle-morin/WordCounter.Solution)) is a console application that gathers both a word and sentence from a user, then checks how frequently the word appears in the sentence. The application checks for full word matches only (e.g., if provided the word "cat" and the sentence "I'm walking the cat to the cathedral", the first three letters of the word cathedral would not be counted._ 
 
 ## Specifications:
 
@@ -42,15 +42,21 @@ _Enter the command ``dotnet tool install -g dotnet-script`` in Terminal (macOS) 
 
 _Enter the following commands in Terminal (macOS) or PowerShell (Windows):_
 * ``cd desktop``
-* ``git clone https://github.com/michelle-morin/WordCounter``
+* ``git clone https://github.com/michelle-morin/WordCounter.Solution``
+* ``cd WordCounter.Solution``
+
+_Confirm that you have navigated to the WordCounter.Solution directory (e.g., by entering the command_ ``pwd`` _in Terminal)._
+
+_To view/edit the source code of this application, open the contents of the WordCounter.Solution directory in a text editor or IDE of your choice (e.g., to open all contents of the directory in Visual Studio Code on macOS, enter the command_ ``code .`` _in Terminal)._
+
+_Run this console application by entering the following commands in Terminal (macOS) or PowerShell (Windows):_
 * ``cd WordCounter``
-
-_Confirm that you have navigated to the WordCounter directory (e.g., by entering the command_ ``pwd`` _in Terminal)._
-
-_Run this console application by entering the following command in Terminal (macOS) or PowerShell (Windows):_
 * ``dotnet run``
 
-_To view/edit the source code of this application, open the contents of the WordCounter directory in a text editor or IDE of your choice (e.g., to open all contents of the directory in Visual Studio Code on macOS, enter the command_ ``code .`` _in Terminal)._
+_Test this console application by entering the following commands in Terminal (macOS) or PowerShell (Windows):_
+* ``cd WordCounter.Tests``
+* ``dotnet restore``
+* ``dotnet test``
 
 ## Technologies Used
 * _Git_
