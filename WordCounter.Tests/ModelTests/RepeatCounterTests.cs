@@ -34,6 +34,13 @@ namespace WordCounter.Tests
       string validation = RepeatCounter.ValidateSentence("Hello There");
       Assert.AreEqual("hello there", validation);
     }
-    
+
+    [TestMethod]
+    public void ValidateSentence_RemovesPunctuation_NoPunctuationSentence()
+    {
+      string validation = RepeatCounter.ValidateSentence("The cat walked.");
+      Assert.AreEqual("the cat walked", validation);
+    }
+
   }
 }
