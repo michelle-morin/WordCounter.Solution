@@ -5,6 +5,8 @@ namespace WordCounter.Models
 {
   public class RepeatCounter
   {
+    public static List<string> MatchingWords { get; set; } = new List<string> {};
+
     public static string ValidateWord(string inputWord)
     {
       if (inputWord.Contains(" "))
@@ -36,6 +38,11 @@ namespace WordCounter.Models
       {
         return "Please enter a sentence";
       }
+    }
+
+    public static void AddMatchesToList(string word, string sentence)
+    {
+      
     }
 
   }

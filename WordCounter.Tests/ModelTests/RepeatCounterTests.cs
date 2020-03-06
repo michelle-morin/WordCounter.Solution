@@ -50,7 +50,7 @@ namespace WordCounter.Tests
       RepeatCounter.AddMatchesToList("cat", "i walked it");
 
       // Act
-      List<string> matchingWords = RepeatCounter.GetAll();
+      List<string> matchingWords = RepeatCounter.MatchingWords;
       int numberOfMatches = matchingWords.Count;
 
       // Assert
