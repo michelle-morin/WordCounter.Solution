@@ -50,7 +50,14 @@ namespace WordCounter
       try
       {
         int numberOfMatches = matchingWords.Count;
-        Console.WriteLine($"\n The number of times the word '{word}' appears in the sentence '{sentence}' is {numberOfMatches}!");
+        if (numberOfMatches == 0)
+        {
+          Console.WriteLine($"\n The sentence '{sentence}' does not include the word '{word}' \n");
+        }
+        else
+        {
+          Console.WriteLine($"\n The number of times the word '{word}' appears in the sentence '{sentence}' is {numberOfMatches}! \n");
+        }
       }
       catch (Exception ex)
       {
