@@ -8,27 +8,7 @@ namespace WordCounter
   {
     public static void Main()
     {
-      string validatedWord = GetUserWord();
-      if (validatedWord == "invalid input" || validatedWord == "error")
-      {
-        Console.WriteLine(validatedWord);
-        Main();
-      }
-      else
-      {
-        string validatedSentence = GetUserSentence();
-        if (validatedSentence == "invalid input" || validatedSentence == "error")
-        {
-          Console.WriteLine(validatedSentence);
-          Main();
-        }
-        else
-        {
-          RepeatCounter.AddMatchesToList(validatedWord, validatedSentence);
-          DisplayNumberOfMatches(validatedWord, validatedSentence);
-        }
-      }
-      
+      StartWordCounter(); 
     }
 
     public static string GetUserWord()
@@ -74,6 +54,32 @@ namespace WordCounter
       catch (Exception ex)
       {
         Console.WriteLine(ex.Message);
+      }
+    }
+
+    public static void StartWordCounter()
+    {
+      string validatedWord = GetUserWord();
+      Console.Clear();
+      if (validatedWord == "invalid input" || validatedWord == "error")
+      {
+        Console.WriteLine(validatedWord);
+        StartWordCounter(); 
+      }
+      else
+      {
+        string validatedSentence = GetUserSentence();
+        if (validatedSentence == "invalid input" || validatedSentence == "error")
+        {
+          Console.WriteLine(validatedSentence);
+          StartWordCounter(); 
+        }
+        else
+        {
+          Console.Clear();
+          RepeatCounter.AddMatchesToList(validatedWord, validatedSentence);
+          DisplayNumberOfMatches(validatedWord, validatedSentence);
+        }
       }
     }
   }
