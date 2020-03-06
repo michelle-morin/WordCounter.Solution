@@ -13,7 +13,7 @@ namespace WordCounter.Models
       }
       else
       {
-        return inputWord;
+        return inputWord.ToLower();
       }
     }
 
