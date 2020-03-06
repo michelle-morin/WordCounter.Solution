@@ -10,15 +10,18 @@ _This project is a console application that gathers both a word and sentence fro
 
 ## Specifications:
 
-| Specification | Example Input | Example Output |
-| ------------- |:-------------:| -------------------:|
-| Application takes input of a word and returns error message when the input is more than one word (contains spaces) | "hello there" | "invalid input" |
-| Application takes input of a word and returns the word in lowercase form when the input is a single word (does not contain spaces) | "Hello" | "hello" |
-| Application takes input of a sentence and returns an error message when the input sentence does not contain spaces (i.e., is a single word) | "cat" | "please enter a sentence" |
-| Application takes inout of a sentence and returns the sentence in lowercase form when the input sentence contains at least one space (i.e., more than one word) | "Hello There" | "hello there" |
-| If sentence is a valid sentence, the application removes all punctuation from input sentence before lowercasing sentence | "The cat walked." | "the cat walked" |
-| Application splits sentence into array of individual words (delimited by spaces) and, for each word of the sentence that matches the input word, adds the matching word to a static list | "cat", "I'm walking the cat to the cathedral" | RepeatCounter.GetMatchingWords() returns a List<string> containing a single instance of "cat" |
-| When input sentence does not include any words matching the input word, the application returns a message indicating no matches were found | "hello", "the weather is great today" | "the word {hello} does not appear in the sentence {the weather is great today}!" |
+| Specification | Example Input | Example Output | Explanation of Selected Input Values |
+| ------------- |:-------------:| :-------------:| -----------------:|
+| Application takes input of a word and returns error message when the input is more than one word (contains spaces) | "hello there" | "invalid input" | This input value includes one space and thus is easily rejected by the sentence validation method. |
+| Application takes input of a word and returns the word in lowercase form when the input is a single word (does not contain spaces) | "Hello" | "hello" | This input value includes one capital letter and thus provides a clear pass/fail depending upon whether the "H" is lowercased. |
+| Application takes input of a sentence and returns an error message when the input sentence does not contain spaces (i.e., is a single word) | "cat" | "please enter a sentence" | This input value is a single word containing no spaces. |
+| Application takes input of a sentence and returns the sentence in lowercase form when the input sentence contains at least one space (i.e., more than one word) | "Hello There" | "hello there" | This input includes two words with a single capital letter, and thus provides a clear pass/fail based upon whether the "H" is lowercased |
+| If sentence is a valid sentence, the application removes all punctuation from input sentence before lowercasing sentence | "The cat walked." | "the cat walked" | This input includes only one punctuation mark to remove |
+| Application splits sentence into array of individual words (delimited by spaces) and, for each word of the sentence that matches the input word, adds the matching word to a static list | "cat", "I'm walking the cat to the cathedral" | static List<string> contains one string | There is only one occurance of the input word "cat" in this input sentence, and the sentence includes another partial match (cathedral), so this test should also ensure the application accepts only complete matches |
+
+_In addition to the above specifications, the application implements the following UI behaviors:_
+* _When input sentence does not include any words matching the input word, the application returns a message indicating no matches were found (e.g., input word: "hello", input sentence: "the weather is great today" would result in output of: "the number of times the word {hello} appears in the sentence {the weather is great today} is {0}!")_
+* _When the input sentence does include a word(s) matching the input word, the application returns a message indicating the number of matches found (e.g., input word: "cat", input sentence: "i walked the cat" would result in the output: "the number of times the word {cat} appears in the sentence {i walked the cat} is {1}!)_
 
 ## Setup/Installation Requirements
 
