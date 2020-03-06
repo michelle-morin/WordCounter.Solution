@@ -12,7 +12,12 @@ _This project is a console application that gathers both a word and sentence fro
 
 | Specification | Example Input | Example Output |
 | ------------- |:-------------:| -------------------:|
-|  |  |  |
+| Application takes input of a word and returns error message when the input is more than one word (contains spaces) | "hello there" | "invalid input" |
+| Application takes input of a word and returns the word in lowercase form when the input is a single word (does not contain spaces) | "Hello" | "hello" |
+| Application takes input of a sentence and returns an error message when the input sentence does not contain spaces (i.e., is a single word) | "cat" | "please enter a sentence" |
+| Application takes inout of a sentence and returns the sentence in lowercase form when the input sentence contains at least one space (i.e., more than one word) | "Hello There" | "hello there" |
+| Application splits sentence into array of individual words (delimited by spaces) and, for each word of the sentence that matches the input word, adds the matching word to a static list | "cat", "I'm walking the cat to the cathedral" | RepeatCounter.GetMatchingWords() returns a List<string> containing a single instance of "cat" |
+| When input sentence does not include any words matching the input word, the application returns a message indicating no matches were found | "hello", "the weather is great today" | "the word {hello} does not appear in the sentence {the weather is great today}!" |
 
 ## Setup/Installation Requirements
 
