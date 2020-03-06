@@ -58,10 +58,31 @@ namespace WordCounter
         {
           Console.WriteLine($"\n The number of times the word '{word}' appears in the sentence '{sentence}' is {numberOfMatches}! \n");
         }
+        AskAgain();
       }
       catch (Exception ex)
       {
         Console.WriteLine(ex.Message);
+      }
+    }
+
+    public static void AskAgain()
+    {
+      RepeatCounter.ClearAll();
+      string goodbye = @"
+      ╔═╗╔═╗╔═╗╔╦╗╔╗ ╦ ╦╔═╗
+      ║ ╦║ ║║ ║ ║║╠╩╗╚╦╝║╣ 
+      ╚═╝╚═╝╚═╝═╩╝╚═╝ ╩ ╚═╝";
+      Console.WriteLine("\n Would you like to return to the main menu? \n [YES] or [NO]");
+      string userResponse = Console.ReadLine();
+      if (userResponse.ToLower() == "yes" || userResponse.ToLower() == "y")
+      {
+        Main();
+      }
+      else if (userResponse.ToLower() == "no" || userResponse.ToLower() == "n")
+      {
+        Console.Clear();
+        Console.WriteLine($"\n {goodbye} \n");
       }
     }
 
