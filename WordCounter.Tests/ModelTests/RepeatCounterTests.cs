@@ -13,5 +13,12 @@ namespace WordCounter.Tests
       string validation = RepeatCounter.ValidateWord("Hello There");
       Assert.AreEqual("invalid input", validation);
     }
+
+    [TestMethod]
+    public void ValidateWord_ReturnLowercaseWord_hello()
+    {
+      string validation = RepeatCounter.ValidateWord("Hello");
+      Assert.AreEqual("hello", validation);
+    }
   }
 }
