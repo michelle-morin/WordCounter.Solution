@@ -21,7 +21,7 @@ namespace WordCounter.Models
     {
       if (inputSentence.Contains(" "))
       {
-        return inputSentence;
+        return inputSentence.ToLower();
       }
       else
       {
