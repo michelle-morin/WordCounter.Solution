@@ -39,7 +39,7 @@ namespace WordCounter.Tests
     public void ValidateSentence_RemovesPunctuation_NoPunctuationSentence()
     {
       string validation = RepeatCounter.ValidateSentence("The cat walked.");
-      Assert.AreEqual("the cat walked", validation);
+      Assert.AreEqual("the cat walked ", validation);
     }
 
   }

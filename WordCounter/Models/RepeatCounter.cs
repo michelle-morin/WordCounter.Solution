@@ -21,7 +21,16 @@ namespace WordCounter.Models
     {
       if (inputSentence.Contains(" "))
       {
-        return inputSentence.ToLower();
+        char[] sentenceArray = inputSentence.ToCharArray();
+        for (int i=0; i<sentenceArray.Length; i++)
+        {
+          if (Char.IsPunctuation(sentenceArray[i]))
+          {
+            sentenceArray[i] = ' ';
+          }
+        }
+        string validatedSentence = new String(sentenceArray);
+        return validatedSentence.ToLower();
       }
       else
       {
