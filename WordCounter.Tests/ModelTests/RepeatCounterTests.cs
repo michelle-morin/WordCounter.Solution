@@ -29,6 +29,13 @@ namespace WordCounter.Tests
     }
 
     [TestMethod]
+    public void ValidateWord_RemovePunctuation_cat()
+    {
+      string validation = RepeatCounter.ValidateWord("cat!");
+      Assert.AreEqual("cat", validation);
+    }
+
+    [TestMethod]
     public void ValidateSentence_ReturnError_InvalidInput()
     {
       string validation = RepeatCounter.ValidateSentence("cat");
@@ -46,7 +53,7 @@ namespace WordCounter.Tests
     public void ValidateSentence_RemovesPunctuation_NoPunctuationSentence()
     {
       string validation = RepeatCounter.ValidateSentence("The cat walked.");
-      Assert.AreEqual("the cat walked ", validation);
+      Assert.AreEqual("the cat walked", validation);
     }
 
     [TestMethod]
@@ -76,6 +83,5 @@ namespace WordCounter.Tests
       // Assert
       Assert.AreEqual(1, numberOfMatches);
     }
-
   }
 }
