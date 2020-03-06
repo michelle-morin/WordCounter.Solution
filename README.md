@@ -21,7 +21,7 @@ _This project is a console application that gathers both a word and sentence fro
 
 _In addition to the above specifications, the application implements the following UI behaviors:_
 * _When input sentence does not include any words matching the input word, the application returns a message indicating no matches were found (e.g., input word: "hello", input sentence: "the weather is great today" would result in output of: "the number of times the word {hello} appears in the sentence {the weather is great today} is {0}!")_
-* _When the input sentence does include a word(s) matching the input word, the application returns a message indicating the number of matches found (e.g., input word: "cat", input sentence: "i walked the cat" would result in the output: "the number of times the word {cat} appears in the sentence {i walked the cat} is {1}!)_
+* _When the input sentence does include a word(s) matching the input word, the application returns a message indicating the number of matches found (e.g., input word: "cat", input sentence: "i walked the cat" would result in the output: "the number of times the word {cat} appears in the sentence {i walked the cat} is {1}!")_
 
 ## Setup/Installation Requirements
 
