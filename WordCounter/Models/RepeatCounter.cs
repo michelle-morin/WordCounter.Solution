@@ -14,13 +14,23 @@ namespace WordCounter.Models
 
     public static string ValidateWord(string inputWord)
     {
-      if (inputWord.Contains(" ") || String.IsNullOrWhiteSpace(inputWord))
+      char[] wordChars = inputWord.ToCharArray();
+      for (int i = 0; i<wordChars.Length; i++)
+      {
+        if (Char.IsPunctuation(wordChars[i]))
+        {
+          wordChars[i] = ' ';
+        }
+      }
+      string userWord = new String(wordChars);
+      string revisedUserWord = userWord.Trim();
+      if (revisedUserWord.Contains(" ") || String.IsNullOrWhiteSpace(revisedUserWord))
       {
         return "invalid input";
       }
       else
       {
-        return inputWord.ToLower();
+        return revisedUserWord.ToLower();
       }
     }
 
@@ -37,7 +47,8 @@ namespace WordCounter.Models
           }
         }
         string validatedSentence = new String(sentenceArray);
-        return validatedSentence.ToLower();
+        string removeWhitespaceSentence = validatedSentence.Trim();
+        return removeWhitespaceSentence.ToLower();
       }
       else
       {
