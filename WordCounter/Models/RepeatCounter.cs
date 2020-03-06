@@ -14,7 +14,7 @@ namespace WordCounter.Models
 
     public static string ValidateWord(string inputWord)
     {
-      if (inputWord.Contains(" "))
+      if (inputWord.Contains(" ") || String.IsNullOrWhiteSpace(inputWord))
       {
         return "invalid input";
       }
@@ -26,7 +26,7 @@ namespace WordCounter.Models
 
     public static string ValidateSentence(string inputSentence)
     {
-      if (inputSentence.Contains(" "))
+      if (inputSentence.Contains(" ") && String.IsNullOrWhiteSpace(inputSentence) == false)
       {
         char[] sentenceArray = inputSentence.ToCharArray();
         for (int i=0; i<sentenceArray.Length; i++)
