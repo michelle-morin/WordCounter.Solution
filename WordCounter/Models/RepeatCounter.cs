@@ -7,8 +7,14 @@ namespace WordCounter.Models
   {
     public static string ValidateWord(string inputWord)
     {
-
+      if (inputWord.Contains(" "))
+      {
+        return "invalid input";
+      }
+      else
+      {
         return inputWord;
+      }
     }
 
   }
