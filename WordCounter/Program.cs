@@ -8,6 +8,7 @@ namespace WordCounter
   {
     public static void Main()
     {
+      DisplayWelcome();
       StartWordCounter(); 
     }
 
@@ -15,7 +16,7 @@ namespace WordCounter
     {
       try
       {
-        Console.WriteLine("Please enter a word:");
+        Console.WriteLine("\n \n Please enter a word:");
         string userInput = Console.ReadLine();
         string userWord = RepeatCounter.ValidateWord(userInput);
         return userWord;
@@ -31,7 +32,7 @@ namespace WordCounter
     {
       try
       {
-        Console.WriteLine("Please enter a sentence:");
+        Console.WriteLine("\n Please enter a sentence:");
         string inputSentence = Console.ReadLine();
         string userSentence = RepeatCounter.ValidateSentence(inputSentence);
         return userSentence;
@@ -49,7 +50,7 @@ namespace WordCounter
       try
       {
         int numberOfMatches = matchingWords.Count;
-        Console.WriteLine($"The number of times the word '{word}' appears in the sentence '{sentence}' is {numberOfMatches}!");
+        Console.WriteLine($"\n The number of times the word '{word}' appears in the sentence '{sentence}' is {numberOfMatches}!");
       }
       catch (Exception ex)
       {
@@ -59,8 +60,6 @@ namespace WordCounter
 
     public static void StartWordCounter()
     {
-      Console.BackgroundColor = ConsoleColor.DarkMagenta;
-      Console.ForegroundColor = ConsoleColor.White;
       string validatedWord = GetUserWord();
       Console.Clear();
       if (validatedWord == "invalid input" || validatedWord == "error")
@@ -83,6 +82,27 @@ namespace WordCounter
           DisplayNumberOfMatches(validatedWord, validatedSentence);
         }
       }
+    }
+
+    public static void DisplayWelcome()
+    {
+      Console.BackgroundColor = ConsoleColor.DarkCyan;
+      Console.ForegroundColor = ConsoleColor.Black;
+      Console.Clear();
+      string welcomeMessage = @"
+      ╦ ╦╔═╗╦  ╔═╗╔═╗╔╦╗╔═╗
+      ║║║║╣ ║  ║  ║ ║║║║║╣ 
+      ╚╩╝╚═╝╩═╝╚═╝╚═╝╩ ╩╚═╝
+      ╔╦╗╔═╗  ╔╦╗╦ ╦╔═╗    
+       ║ ║ ║   ║ ╠═╣║╣     
+       ╩ ╚═╝   ╩ ╩ ╩╚═╝    
+      ╦ ╦╔═╗╦═╗╔╦╗         
+      ║║║║ ║╠╦╝ ║║         
+      ╚╩╝╚═╝╩╚══╩╝         
+      ╔═╗╔═╗╦ ╦╔╗╔╔╦╗╔═╗╦═╗
+      ║  ║ ║║ ║║║║ ║ ║╣ ╠╦╝
+      ╚═╝╚═╝╚═╝╝╚╝ ╩ ╚═╝╩╚═";
+      Console.WriteLine(welcomeMessage);
     }
   }
 }
