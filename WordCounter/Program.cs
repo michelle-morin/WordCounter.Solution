@@ -16,7 +16,7 @@ namespace WordCounter
     {
       try
       {
-        Console.WriteLine("\n \n Please enter a word:");
+        Console.WriteLine("\n Please enter a word:");
         string userInput = Console.ReadLine();
         string userWord = RepeatCounter.ValidateWord(userInput);
         return userWord;
@@ -89,10 +89,10 @@ namespace WordCounter
     public static void StartWordCounter()
     {
       string validatedWord = GetUserWord();
-      Console.Clear();
       if (validatedWord == "invalid input")
       {
-        Console.WriteLine(validatedWord);
+        Console.Clear();
+        Console.WriteLine($"\n {validatedWord}");
         StartWordCounter(); 
       }
       else if (validatedWord == "error")
@@ -104,7 +104,7 @@ namespace WordCounter
         string validatedSentence = GetUserSentence();
         if (validatedSentence == "invalid input")
         {
-          Console.WriteLine(validatedSentence);
+          Console.WriteLine($"\n {validatedSentence} \n \n Let's try this again, from the beginning!");
           StartWordCounter(); 
         }
         else if (validatedSentence == "error")
