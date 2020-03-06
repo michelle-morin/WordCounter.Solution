@@ -19,7 +19,14 @@ namespace WordCounter.Models
 
     public static string ValidateSentence(string inputSentence)
     {
-      return inputSentence;
+      if (inputSentence.Contains(" "))
+      {
+        return inputSentence;
+      }
+      else
+      {
+        return "Please enter a sentence";
+      }
     }
 
   }
