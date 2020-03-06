@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 using WordCounter;
 using WordCounter.Models;
 
@@ -40,6 +41,20 @@ namespace WordCounter.Tests
     {
       string validation = RepeatCounter.ValidateSentence("The cat walked.");
       Assert.AreEqual("the cat walked ", validation);
+    }
+
+    [TestMethod]
+    public void RepearCounterClass_RetrieveEmptyList_EmptyList()
+    {
+      // Arrange
+      RepeatCounter.AddMatchesToList("cat", "i walked it");
+
+      // Act
+      List<string> matchingWords = RepeatCounter.GetAll();
+      int numberOfMatches = matchingWords.Count;
+
+      // Assert
+      Assert.AreEqual(0, numberOfMatches);
     }
 
   }
