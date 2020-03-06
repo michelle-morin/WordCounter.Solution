@@ -116,7 +116,9 @@ namespace WordCounter
         string validatedSentence = GetUserSentence();
         if (validatedSentence == "invalid input")
         {
-          Console.WriteLine($"\n {validatedSentence} \n \n Let's try this again, from the beginning!");
+          Console.Clear();
+          string confusedArt = @"¯\_(ツ)_/¯";
+          Console.WriteLine($"\n {validatedSentence} \n \n {confusedArt} \n Let's try this again, from the beginning!");
           StartWordCounter(); 
         }
         else if (validatedSentence == "error")
