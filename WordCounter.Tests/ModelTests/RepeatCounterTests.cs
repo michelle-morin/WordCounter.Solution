@@ -32,7 +32,7 @@ namespace WordCounter.Tests
     public void ValidateSentence_ReturnError_InvalidInput()
     {
       string validation = RepeatCounter.ValidateSentence("cat");
-      Assert.AreEqual("Please enter a sentence", validation);
+      Assert.AreEqual("invalid input", validation);
     }
 
     [TestMethod]

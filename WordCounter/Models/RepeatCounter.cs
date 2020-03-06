@@ -41,7 +41,7 @@ namespace WordCounter.Models
       }
       else
       {
-        return "Please enter a sentence";
+        return "invalid input";
       }
     }
 
