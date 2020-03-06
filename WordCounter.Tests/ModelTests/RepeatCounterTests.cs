@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Collections.Generic;
 using WordCounter;
 using WordCounter.Models;
@@ -6,8 +7,13 @@ using WordCounter.Models;
 namespace WordCounter.Tests
 {
   [TestClass]
-  public class RepeatCounterTests
+  public class RepeatCounterTests : IDisposable
   {
+    public void Dispose()
+    {
+      RepeatCounter.ClearAll();
+    }
+
     [TestMethod]
     public void ValidateWord_ReturnError_InvalidInput()
     {

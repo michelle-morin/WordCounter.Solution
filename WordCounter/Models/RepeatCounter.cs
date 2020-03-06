@@ -7,6 +7,11 @@ namespace WordCounter.Models
   {
     public static List<string> MatchingWords { get; set; } = new List<string> {};
 
+    public static void ClearAll()
+    {
+      MatchingWords.Clear();
+    }
+
     public static string ValidateWord(string inputWord)
     {
       if (inputWord.Contains(" "))
