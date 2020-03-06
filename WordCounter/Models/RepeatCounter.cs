@@ -36,7 +36,8 @@ namespace WordCounter.Models
 
     public static string ValidateSentence(string inputSentence)
     {
-      if (inputSentence.Contains(" ") && String.IsNullOrWhiteSpace(inputSentence) == false)
+      string[] wordsInSentence = inputSentence.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries);
+      if (wordsInSentence.Length > 1 && String.IsNullOrWhiteSpace(inputSentence) == false)
       {
         char[] sentenceArray = inputSentence.ToCharArray();
         for (int i=0; i<sentenceArray.Length; i++)
