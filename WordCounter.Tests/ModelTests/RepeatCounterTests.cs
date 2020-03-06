@@ -27,5 +27,13 @@ namespace WordCounter.Tests
       string validation = RepeatCounter.ValidateSentence("cat");
       Assert.AreEqual("Please enter a sentence", validation);
     }
+
+    [TestMethod]
+    public void ValidateSentence_ReturnLowercaseSentence_LowercaseSentence()
+    {
+      string validation = RepeatCounter.ValidateSentence("Hello There");
+      Assert.AreEqual("hello there", validation);
+    }
+    
   }
 }
