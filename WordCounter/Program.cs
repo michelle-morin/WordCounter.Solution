@@ -62,18 +62,26 @@ namespace WordCounter
     {
       string validatedWord = GetUserWord();
       Console.Clear();
-      if (validatedWord == "invalid input" || validatedWord == "error")
+      if (validatedWord == "invalid input")
       {
         Console.WriteLine(validatedWord);
         StartWordCounter(); 
       }
+      else if (validatedWord == "error")
+      {
+        StartWordCounter();
+      }
       else
       {
         string validatedSentence = GetUserSentence();
-        if (validatedSentence == "invalid input" || validatedSentence == "error")
+        if (validatedSentence == "invalid input")
         {
           Console.WriteLine(validatedSentence);
           StartWordCounter(); 
+        }
+        else if (validatedSentence == "error")
+        {
+          StartWordCounter();
         }
         else
         {
