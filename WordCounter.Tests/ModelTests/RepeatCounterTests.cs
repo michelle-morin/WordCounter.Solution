@@ -50,7 +50,7 @@ namespace WordCounter.Tests
     }
 
     [TestMethod]
-    public void RepearCounterClass_RetrieveEmptyList_EmptyList()
+    public void RepeatCounterClass_RetrieveEmptyList_EmptyList()
     {
       // Arrange
       RepeatCounter.AddMatchesToList("cat", "i walked it");
@@ -61,6 +61,20 @@ namespace WordCounter.Tests
 
       // Assert
       Assert.AreEqual(0, numberOfMatches);
+    }
+
+    [TestMethod]
+    public void RepeatCounterClass_RetrievesList_List()
+    {
+      // Arrange
+      RepeatCounter.AddMatchesToList("cat", "i'm walking the cat to the cathedral'");
+
+      // Act
+      List<string> matchingWords = RepeatCounter.MatchingWords;
+      int numberOfMatches = matchingWords.Count;
+
+      // Assert
+      Assert.AreEqual(1, numberOfMatches);
     }
 
   }
