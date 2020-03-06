@@ -47,7 +47,14 @@ namespace WordCounter.Models
 
     public static void AddMatchesToList(string word, string sentence)
     {
-      
+      string[] setenceArr = sentence.Split(' ');
+      for (int i=0; i<setenceArr.Length; i++)
+      {
+        if (word == setenceArr[i].Trim())
+        {
+          MatchingWords.Add(setenceArr[i]);
+        }
+      }
     }
 
   }
