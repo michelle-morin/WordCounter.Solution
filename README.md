@@ -6,7 +6,7 @@
 
 ## Description
 
-_This project is a console application that gathers both a word and sentence from a user, then checks how frequently the word appears in the sentence. The application checks for full word matches only (e.g., if provided the word "cat" and the sentence "I'm walking the cat to the cathedral", the first three letters of the word cathedral would not be counted._ 
+_This project (accessible on [Github](https://github.com/michelle-morin/WordCounter)) is a console application that gathers both a word and sentence from a user, then checks how frequently the word appears in the sentence. The application checks for full word matches only (e.g., if provided the word "cat" and the sentence "I'm walking the cat to the cathedral", the first three letters of the word cathedral would not be counted._ 
 
 ## Specifications:
 
