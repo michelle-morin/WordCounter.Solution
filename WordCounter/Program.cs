@@ -59,6 +59,8 @@ namespace WordCounter
 
     public static void StartWordCounter()
     {
+      Console.BackgroundColor = ConsoleColor.DarkMagenta;
+      Console.ForegroundColor = ConsoleColor.White;
       string validatedWord = GetUserWord();
       Console.Clear();
       if (validatedWord == "invalid input" || validatedWord == "error")
