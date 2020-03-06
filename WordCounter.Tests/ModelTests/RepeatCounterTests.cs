@@ -20,5 +20,12 @@ namespace WordCounter.Tests
       string validation = RepeatCounter.ValidateWord("Hello");
       Assert.AreEqual("hello", validation);
     }
+
+    [TestMethod]
+    public void ValidateSentence_ReturnError_InvalidInput()
+    {
+      string validation = RepeatCounter.ValidateSentence("cat");
+      Assert.AreEqual("Please enter a sentence", validation);
+    }
   }
 }
