@@ -21,6 +21,10 @@ namespace WordCounter.Models
         {
           wordChars[i] = ' ';
         }
+        else if (wordChars[i] == '$')
+        {
+          wordChars[i] = ' ';
+        }
       }
       string userWord = new String(wordChars);
       string revisedUserWord = userWord.Trim();
@@ -43,6 +47,10 @@ namespace WordCounter.Models
         for (int i=0; i<sentenceArray.Length; i++)
         {
           if (Char.IsPunctuation(sentenceArray[i]))
+          {
+            sentenceArray[i] = ' ';
+          }
+          else if (sentenceArray[i] == '$')
           {
             sentenceArray[i] = ' ';
           }
