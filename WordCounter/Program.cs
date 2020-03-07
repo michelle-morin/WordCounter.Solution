@@ -82,6 +82,8 @@ namespace WordCounter
       }
       else if (userResponse.ToLower() == "no" || userResponse.ToLower() == "n")
       {
+        Console.BackgroundColor = ConsoleColor.Black;
+        Console.ForegroundColor = ConsoleColor.Magenta;
         Console.Clear();
         Console.WriteLine($"\n {goodbye}");
         Console.WriteLine("\n" + "".PadLeft(20) + $"{wave} \n");
