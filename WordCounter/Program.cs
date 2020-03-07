@@ -73,17 +73,7 @@ namespace WordCounter
       ╔═╗╔═╗╔═╗╔╦╗╔╗ ╦ ╦╔═╗
       ║ ╦║ ║║ ║ ║║╠╩╗╚╦╝║╣ 
       ╚═╝╚═╝╚═╝═╩╝╚═╝ ╩ ╚═╝";
-      string flowers = @"
-              ,,,                      ,,,
-             {{{}}    ,,,             {{{}}    ,,,
-          ,,, ~Y~    {{{}},,,      ,,, ~Y~    {{{}},,, 
-         {{}}} |/,,,  ~Y~{{}}}    {{}}} |/,,,  ~Y~{{}}}
-          ~Y~ \|{{}}}/\|/ ~Y~  ,,, ~Y~ \|{{}}}/\|/ ~Y~  ,,,
-          \|/ \|/~Y~  \|,,,|/ {{}}}\|/ \|/~Y~  \|,,,|/ {{}}}
-          \|/ \|/\|/  \{{{}}/  ~Y~ \|/ \|/\|/  \{{{}}/  ~Y~
-          \|/\\|/\|/ \\|~Y~//  \|/ \|/\\|/\|/ \\|~Y~//  \|/
-          \|//\|/\|/,\\|/|/|// \|/ \|//\|/\|/,\\|/|/|// \|/
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^";
+      string wave = @"＼( ･_･)";
       Console.WriteLine("\n Would you like to return to the main menu? \n [YES] or [NO]");
       string userResponse = Console.ReadLine();
       if (userResponse.ToLower() == "yes" || userResponse.ToLower() == "y")
@@ -94,7 +84,7 @@ namespace WordCounter
       {
         Console.Clear();
         Console.WriteLine($"\n {goodbye}");
-        Console.WriteLine($"\n{flowers} \n");
+        Console.WriteLine("\n" + "".PadLeft(20) + $"{wave} \n");
       }
     }
 
